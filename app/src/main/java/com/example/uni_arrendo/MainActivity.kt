@@ -55,8 +55,7 @@ class MainActivity : ComponentActivity() {
             UniArrendoTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
                 ) {
                     ViewContainer()
                 }
@@ -67,8 +66,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun BarraBuscar(modifier: Modifier = Modifier) {
-    TextField(
-        value = "",
+    TextField(value = "",
         leadingIcon = {
             Icon(
                 imageVector = Icons.Default.Search,
@@ -84,10 +82,9 @@ fun BarraBuscar(modifier: Modifier = Modifier) {
             focusedContainerColor = MaterialTheme.colorScheme.surface
         ),
         modifier = modifier
-            .paddingFromBaseline(top = 24.dp, bottom = 8.dp)
+            .paddingFromBaseline(top = 30.dp, bottom = 8.dp)
             .offset(40.dp, 30.dp)
             .heightIn(40.dp)
-
     )
 }
 
@@ -101,8 +98,7 @@ fun barrabusqueda() {
 @Preview
 @Composable
 fun ViewContainer() {
-    Scaffold(
-        topBar = { ParteSuperior() },
+    Scaffold(topBar = { ParteSuperior() },
         content = { ParteCentral() },
         bottomBar = { ParteInferior() }
 
@@ -126,9 +122,7 @@ fun ParteSuperior(modifier: Modifier = Modifier) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
 
             Text(
-                text = "Registrarse",
-                modifier = modifier
-                    .background(Color.White)
+                text = "Registrarse", modifier = modifier.background(Color.White)
             )
         }
 
@@ -138,13 +132,11 @@ fun ParteSuperior(modifier: Modifier = Modifier) {
                 contentDescription = null,
                 modifier = Modifier.size(80.dp)
             )
-            Text(
-                text = "Iniciar Sesion",
+            Text(text = "Iniciar Sesion",
                 modifier = modifier
                     .background(Color.White)
                     .size(55.dp)
-                    .clickable { }
-            )
+                    .clickable { })
         }
 
     }
@@ -193,18 +185,33 @@ fun ParteInferior(modifier: Modifier = Modifier) {
 @Preview
 @Composable
 fun ParteCentral(modifier: Modifier = Modifier) {
-    Column(
+    Box(
         modifier = modifier
             .fillMaxSize()
             .background(Color.Blue),
-        horizontalAlignment = Alignment.CenterHorizontally
+        contentAlignment = Alignment.Center
     ) {
-        Row (modifier = modifier
-            .fillMaxWidth(),
+        Column {
+            Row() {
+                Image(
+                    painter = painterResource(id = R.drawable.home),
+                    contentDescription = null,
+                    modifier = modifier
+                        .fillMaxWidth()
+                        .height(50.dp),
 
-            horizontalArrangement = Arrangement.Center
-        ){
-            BarraBuscar()
+                )
+
+            }
+            Row(
+                modifier = modifier
+                    .fillMaxWidth()
+                    .height(50.dp),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                BarraBuscar()
+            }
         }
+
     }
 }
