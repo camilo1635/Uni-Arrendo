@@ -66,7 +66,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun BarraBuscar(modifier: Modifier = Modifier) {
-    TextField(value = "",
+    TextField(
+        value = "",
         leadingIcon = {
             Icon(
                 imageVector = Icons.Default.Search,
@@ -122,7 +123,9 @@ fun ParteSuperior(modifier: Modifier = Modifier) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
 
             Text(
-                text = "Registrarse", modifier = modifier.background(Color.White)
+                text = "Registrarse", modifier = modifier
+                    .background(Color.White)
+                    .padding(10.dp)
             )
         }
 
@@ -192,15 +195,34 @@ fun ParteCentral(modifier: Modifier = Modifier) {
         contentAlignment = Alignment.Center
     ) {
         Column {
-            Row() {
+            Row(
+                modifier = modifier
+                    .fillMaxWidth()
+                    .height(100.dp),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Text(
+                    text = "Arrendar", modifier = modifier
+                        .background(Color.White)
+                        .padding(10.dp)
+
+                )
+
+                Text(
+                    text = "Publicar", modifier = modifier
+                        .background(Color.White)
+                        .padding(10.dp)
+
+                )
+                
                 Image(
                     painter = painterResource(id = R.drawable.home),
                     contentDescription = null,
                     modifier = modifier
-                        .fillMaxWidth()
-                        .height(50.dp),
+                        .width(90.dp)
+                        .height(40.dp),
 
-                )
+                    )
 
             }
             Row(
