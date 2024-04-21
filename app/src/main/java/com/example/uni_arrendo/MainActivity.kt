@@ -9,6 +9,7 @@ import androidx.annotation.StringRes
 import androidx.compose.animation.scaleIn
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -185,7 +186,6 @@ fun ParteInferior(modifier: Modifier = Modifier) {
 }
 
 
-@Preview
 @Composable
 fun ParteCentral(modifier: Modifier = Modifier) {
     Box(
