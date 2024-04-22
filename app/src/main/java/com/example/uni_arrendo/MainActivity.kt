@@ -58,7 +58,7 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
                 ) {
-                    ViewContainer()
+                    Contenido()
                 }
             }
         }
@@ -125,8 +125,12 @@ fun ParteSuperior(modifier: Modifier = Modifier) {
 
             Text(
                 text = "Registrarse", modifier = modifier
-                    .background(Color.White)
-                    .padding(10.dp)
+                    .border(
+                        width = 2.dp,
+                        color = Color.Black,
+                        shape = CircleShape,
+
+                    )
             )
         }
 
