@@ -148,7 +148,7 @@ fun Content(modifier: Modifier = Modifier) {
                 modifier = Modifier
                     .height(150.dp),
 
-                painter = painterResource(id = R.drawable.ab5_hiit),
+                painter = painterResource(id = R.drawable.tercera_imagen),
                 contentDescription = null,
             )
 
@@ -164,14 +164,14 @@ fun Content(modifier: Modifier = Modifier) {
                     modifier = Modifier
                         .height(90.dp)
                         .padding(8.dp),
-                    painter = painterResource(id = R.drawable.ab4_tabata),
+                    painter = painterResource(id = R.drawable.segunda_imagen),
                     contentDescription = null
                 )
                 Image(
                     modifier = Modifier
                         .height(90.dp)
                         .padding(8.dp),
-                    painter = painterResource(id = R.drawable.ab1_inversions),
+                    painter = painterResource(id = R.drawable.primera_imagen),
                     contentDescription = null
                 )
 
