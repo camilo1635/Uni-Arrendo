@@ -96,7 +96,7 @@ fun ParteSuperior(
     ) {
 
         Image(
-            painter = painterResource(id = R.drawable.iconoapp),
+            painter = painterResource(id = R.drawable.icono_app),
             contentDescription = null,
             modifier = Modifier
                 .padding(10.dp)
