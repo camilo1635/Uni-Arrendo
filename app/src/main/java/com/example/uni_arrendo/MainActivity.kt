@@ -7,7 +7,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.ViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -57,4 +61,12 @@ enum class Pantallas() {
     Tercera,
     Cuarta,
     Quinta
+}
+
+class PrimeraPantallaViewModel : ViewModel() {
+    var queryBusqueda: String by mutableStateOf("")
+
+    fun actualizarQueryBusqueda(nuevaQuery: String) {
+        queryBusqueda = nuevaQuery
+    }
 }

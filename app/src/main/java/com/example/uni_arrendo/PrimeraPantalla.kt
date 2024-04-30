@@ -32,6 +32,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -43,6 +44,8 @@ fun PrimeraPantalla(
     onClick3: () -> Unit,
     navController: NavController
 ) {
+    val viewModel = viewModel<PrimeraPantallaViewModel>()
+
     Scaffold(topBar = { ParteSuperior(navController = navController) },
         content = { ParteCentral(navController = navController) },
         bottomBar = { ParteInferior() }
@@ -51,9 +54,12 @@ fun PrimeraPantalla(
 }
 
 @Composable
-fun BarraBuscar(modifier: Modifier = Modifier) {
+fun BarraBuscar(
+    modifier: Modifier = Modifier,
+    viewModel: PrimeraPantallaViewModel
+) {
     TextField(
-        value = "",
+        value = viewModel.queryBusqueda,
         leadingIcon = {
             Icon(
                 imageVector = Icons.Default.Search,
@@ -63,7 +69,7 @@ fun BarraBuscar(modifier: Modifier = Modifier) {
         placeholder = {
             Text(text = stringResource(id = R.string.text_search))
         },
-        onValueChange = {},
+        onValueChange = { viewModel.actualizarQueryBusqueda(it) },
         colors = TextFieldDefaults.colors(
             unfocusedContainerColor = MaterialTheme.colorScheme.surface,
             focusedContainerColor = MaterialTheme.colorScheme.surface
@@ -74,13 +80,6 @@ fun BarraBuscar(modifier: Modifier = Modifier) {
             .heightIn(40.dp)
     )
 }
-
-
-@Composable
-fun barrabusqueda() {
-    BarraBuscar()
-}
-
 
 @Composable
 fun ParteSuperior(
@@ -239,7 +238,7 @@ fun ParteCentral(
                     .height(50.dp),
                 horizontalArrangement = Arrangement.Center
             ) {
-                BarraBuscar()
+                BarraBuscar(viewModel = viewModel())
             }
         }
 
