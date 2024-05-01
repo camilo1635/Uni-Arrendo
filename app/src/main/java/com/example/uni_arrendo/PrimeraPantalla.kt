@@ -42,6 +42,7 @@ fun PrimeraPantalla(
     onClick1: () -> Unit,
     onClick2: () -> Unit,
     onClick3: () -> Unit,
+    onClick4: () -> Unit,
     navController: NavController
 ) {
     val viewModel = viewModel<PrimeraPantallaViewModel>()
@@ -105,7 +106,7 @@ fun ParteSuperior(
             )
         Column() {
 
-            Button(onClick = { navController.navigate(Pantallas.Tercera.name) }) {
+            Button(onClick = {  }) {
                 Text(
                     text = "Registrarse"
 
@@ -215,7 +216,7 @@ fun ParteCentral(
                 }
 
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = { navController.navigate(Pantallas.Sexta.name) },
                     modifier = modifier
                         .padding(10.dp)
                 ) {

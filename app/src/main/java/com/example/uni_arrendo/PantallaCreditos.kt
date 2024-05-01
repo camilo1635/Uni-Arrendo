@@ -40,7 +40,7 @@ import androidx.navigation.NavController
 
 @Composable
 @Preview(showBackground = true)
-fun PantallaDescripcionCreditos(modifier: Modifier = Modifier) {
+fun PantallaCreditos(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxSize()
