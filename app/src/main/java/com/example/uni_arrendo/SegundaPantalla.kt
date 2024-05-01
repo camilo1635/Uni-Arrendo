@@ -58,7 +58,7 @@ fun Topbar(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .background(Color.White),
+            .background(Color.Cyan),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Column(
@@ -111,7 +111,7 @@ fun Content(modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(Color.White),
+            .background(Color.Cyan),
         contentAlignment = Alignment.Center
     ) {
         Row(

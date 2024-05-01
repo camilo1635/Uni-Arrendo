@@ -89,7 +89,7 @@ fun ParteSuperior(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .background(Color.Blue),
+            .background(Color.Cyan),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -183,7 +183,7 @@ fun ParteCentral(
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(Color.Blue),
+            .background(Color.Cyan),
         contentAlignment = Alignment.Center
     ) {
         Column {
