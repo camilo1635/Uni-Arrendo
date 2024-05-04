@@ -106,7 +106,7 @@ fun ParteSuperior(
             )
         Column() {
 
-            Button(onClick = {  }) {
+            Button(onClick = { }) {
                 Text(
                     text = "Registrarse"
 
