@@ -52,11 +52,19 @@ fun Navegacion() {
                 onClick2 = { navHostController.navigate(Pantallas.Inicio.name) }
             )
         }
-        composable(route = Pantallas.Sexta.name){
+        composable(route = Pantallas.Tercera.name) {
+            TerceraPantalla(
+                navController = navHostController,
+                onClick1 = { navHostController.navigate(Pantallas.Inicio.name) },
+            )
+        }
+        composable(route = Pantallas.Sexta.name) {
             PantallaCreditos()
         }
+
     }
 }
+
 
 
 enum class Pantallas() {

@@ -125,7 +125,7 @@ fun ParteSuperior(
                 contentDescription = null,
                 modifier = Modifier.size(80.dp)
             )
-            Button(onClick = { navController.navigate(Pantallas.Cuarta.name) }) {
+            Button(onClick = { navController.navigate(Pantallas.Tercera.name) }) {
                 Text(
                     text = "Iniciar Sesion",
                 )
