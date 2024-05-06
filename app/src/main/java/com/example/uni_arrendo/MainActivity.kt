@@ -49,6 +49,9 @@ fun Navegacion() {
         composable(route = Pantallas.Cuarta.name) {
             CuartaPantalla(navController = navHostController)
         }
+        composable(route = Pantallas.Quinta.name){
+            Paquetes(navController = navHostController)
+        }
         composable(route = Pantallas.Sexta.name) {
             PantallaCreditos()
         }

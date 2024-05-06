@@ -80,7 +80,7 @@ fun Topbar(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            Button(onClick = { navController.navigate(Pantallas.Tercera.name) }) {
+            Button(onClick = { navController.navigate(Pantallas.Cuarta.name) }) {
                 Text(
                     text = "Registrarse",
                 )
