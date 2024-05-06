@@ -37,8 +37,6 @@ import androidx.navigation.NavController
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun SegundaPantalla(
-    onClick1: () -> Unit,
-    onClick2: () -> Unit,
     navController: NavController
 ) {
     Scaffold(

@@ -38,25 +38,16 @@ fun Navegacion() {
     val navHostController = rememberNavController()
     NavHost(navController = navHostController, startDestination = Pantallas.Inicio.name) {
         composable(route = Pantallas.Inicio.name) {
-            PrimeraPantalla(navController = navHostController,
-                onNextClick = { navHostController.navigate(Pantallas.Segunda.name) },
-                onClick1 = { navHostController.navigate(Pantallas.Tercera.name) },
-                onClick2 = { navHostController.navigate(Pantallas.Cuarta.name) },
-                onClick3 = { navHostController.navigate(Pantallas.Quinta.name) },
-                onClick4 = { navHostController.navigate(Pantallas.Sexta.name) }
-            )
+            PrimeraPantalla(navController = navHostController)
         }
         composable(route = Pantallas.Segunda.name) {
-            SegundaPantalla(navController = navHostController,
-                onClick1 = { navHostController.navigate(Pantallas.Tercera.name) },
-                onClick2 = { navHostController.navigate(Pantallas.Inicio.name) }
-            )
+            SegundaPantalla(navController = navHostController)
         }
         composable(route = Pantallas.Tercera.name) {
-            TerceraPantalla(
-                navController = navHostController,
-                onClick1 = { navHostController.navigate(Pantallas.Inicio.name) },
-            )
+            TerceraPantalla(navController = navHostController)
+        }
+        composable(route = Pantallas.Cuarta.name) {
+            CuartaPantalla(navController = navHostController)
         }
         composable(route = Pantallas.Sexta.name) {
             PantallaCreditos()
@@ -64,7 +55,6 @@ fun Navegacion() {
 
     }
 }
-
 
 
 enum class Pantallas() {

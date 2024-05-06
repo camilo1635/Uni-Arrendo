@@ -38,11 +38,6 @@ import androidx.navigation.NavController
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun PrimeraPantalla(
-    onNextClick: () -> Unit,
-    onClick1: () -> Unit,
-    onClick2: () -> Unit,
-    onClick3: () -> Unit,
-    onClick4: () -> Unit,
     navController: NavController
 ) {
     val viewModel = viewModel<PrimeraPantallaViewModel>()
@@ -106,7 +101,7 @@ fun ParteSuperior(
             )
         Column() {
 
-            Button(onClick = {  }) {
+            Button(onClick = { navController.navigate(Pantallas.Cuarta.name) }) {
                 Text(
                     text = "Registrarse"
 
