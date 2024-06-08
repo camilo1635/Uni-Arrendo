@@ -1,4 +1,4 @@
-La aplicación consta de una interfaz principal la cual contiene una serie de botones tales como publicar, arrendar, home, registrar, iniciar sesión, una barra de búsqueda, un panel inferior con tres opciones (favoritos, notificaciones, buscar) y un Spinner (tipo de vivienda), este último no se realizó debido a la falta de conocimiento para dicha función, las demás funciones se realizaron correctamente a lo propuesto.
+La aplicación se desarrollo mediante el FrameWork 'Jetpack Compose' de Kotlin, la app consta de una interfaz principal la cual contiene una serie de botones tales como publicar, arrendar, home, registrar, iniciar sesión, una barra de búsqueda, un panel inferior con tres opciones (favoritos, notificaciones, buscar) y un Spinner (tipo de vivienda)
 
 En la segunda interfaz (Arrendar) se implementaron imágenes, una descripción, un filtrado, un botón de ‘contactar’ y un botón de ‘regreso’ a comparación con la interfaz principal, en esta interfaz se llevaron a cabo todas las funciones propuestas.
 
